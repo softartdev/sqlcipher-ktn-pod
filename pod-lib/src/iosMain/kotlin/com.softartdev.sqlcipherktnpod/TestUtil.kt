@@ -1,21 +1,19 @@
 package com.softartdev.sqlcipherktnpod
 
-import kotlinx.cinterop.memScoped
 import cnames.structs.sqlite3
 import cocoapods.SQLCipher.*
-import kotlinx.cinterop.allocPointerTo
-import kotlinx.cinterop.cstr
-import kotlinx.cinterop.value
+import kotlinx.cinterop.*
 
-class Util {
+class TestUtil {
 
     fun checkCocoapodsIsAvailable(): Boolean {
         var result = false
         memScoped {
             val db = allocPointerTo<sqlite3>()
             val key = "".cstr
-            val rc: Int = sqlite3_key(db.value, key.ptr, key.size)
-            result = rc != SQLITE_OK
+//            val rc: Int = sqlite3_key(db.value, key.ptr, key.size)
+//            result = rc != SQLITE_OK
+            result = SQLITE_ERROR != SQLITE_OK
         }
         return result
     }

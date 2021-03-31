@@ -7,6 +7,6 @@ class PodAvailableTest {
 
     @Test
     fun podIsAvailableTest() {
-        assertTrue(actual = Util().checkCocoapodsIsAvailable())
+        assertTrue(actual = TestUtil().checkCocoapodsIsAvailable())
     }
 }
