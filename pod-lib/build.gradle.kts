@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
+    id("maven-publish")
 }
 
 group = "com.softartdev"
