@@ -1,7 +1,7 @@
 package com.softartdev.sqlcipherktnpod
 
 import cnames.structs.sqlite3
-import cocoapods.SQLCipher.*
+//import cocoapods.SQLCipher.*
 import kotlinx.cinterop.*
 
 class TestUtil {
@@ -13,7 +13,7 @@ class TestUtil {
             val key = "".cstr
 //            val rc: Int = sqlite3_key(db.value, key.ptr, key.size)
 //            result = rc != SQLITE_OK
-            result = SQLITE_ERROR != SQLITE_OK
+//            result = SQLITE_ERROR != SQLITE_OK
         }
         return result
     }

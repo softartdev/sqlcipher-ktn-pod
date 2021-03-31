@@ -14,8 +14,7 @@ repositories {
 }
 
 kotlin {
-//    ios()
-    iosX64("ios")
+    ios()
     sourceSets {
         val commonMain by getting {
             dependencies {
