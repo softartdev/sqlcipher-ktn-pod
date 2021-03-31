@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        google()
+        jcenter()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+enableFeaturePreview('GRADLE_METADATA')
+
+rootProject.name = "sqlcipher-ktn-pod"
+include("pod-lib")
