@@ -5,31 +5,14 @@ plugins {
 }
 
 group = "com.softartdev"
-version = "1.0"
+version = "0.1"
 
 repositories {
     mavenCentral()
-    jcenter()
-    maven { setUrl("https://dl.bintray.com/kotlin/kotlinx.html/") }
 }
 
 kotlin {
     ios()
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(kotlin("stdlib-common"))
-            }
-        }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
-            }
-        }
-        val iosMain by getting
-        val iosTest by getting
-    }
     cocoapods {
         frameworkName = "SQLCipher pod on Kotlin Native"
         summary = "Wrap SQLCipher lib from Cocoapods to Kotlin Native"
