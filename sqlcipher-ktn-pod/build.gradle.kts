@@ -4,7 +4,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.softartdev"
+group = "io.github.softartdev"
 version = "0.1"
 
 repositories {
