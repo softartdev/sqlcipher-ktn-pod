@@ -8,5 +8,5 @@ pluginManagement {
 }
 enableFeaturePreview('GRADLE_METADATA')
 
-rootProject.name = "sqlcipher-ktn-pod"
-include("pod-lib")
+rootProject.name = "sqlcipher-ktn"
+include("sqlcipher-ktn-pod")
