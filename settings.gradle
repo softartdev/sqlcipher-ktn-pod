@@ -7,6 +7,4 @@ pluginManagement {
     }
 }
 enableFeaturePreview('GRADLE_METADATA')
-
-rootProject.name = "sqlcipher-ktn"
-include("sqlcipher-ktn-pod")
+rootProject.name = "sqlcipher-ktn-pod"

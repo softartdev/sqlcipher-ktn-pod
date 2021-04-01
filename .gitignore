@@ -2,6 +2,8 @@
 *.iml
 out
 gen
+*.hprof
+*.gpg
 
 build
 **/build/
