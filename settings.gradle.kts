@@ -6,5 +6,5 @@ pluginManagement {
         mavenCentral()
     }
 }
-enableFeaturePreview('GRADLE_METADATA')
+includeBuild("convention-plugins")
 rootProject.name = "sqlcipher-ktn-pod"

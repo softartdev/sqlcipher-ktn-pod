@@ -9,3 +9,5 @@ build
 **/build/
 # Project exclude paths
 /.gradle/
+**/.gradle/
+/local.properties

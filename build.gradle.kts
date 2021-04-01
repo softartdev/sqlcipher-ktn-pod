@@ -1,7 +1,7 @@
 plugins {
     kotlin("multiplatform") version "1.4.32"
     kotlin("native.cocoapods") version "1.4.32"
-    id("maven-publish")
+    id("convention.publication")
 }
 
 group = "io.github.softartdev"
