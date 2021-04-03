@@ -12,15 +12,18 @@ fi
 
 echo "### Install ngrok ###"
 
-wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip
-unzip ngrok-stable-linux-386.zip
+curl https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip -o ngrok.zip
+unzip ngrok.zip
 chmod +x ./ngrok
 
 echo "### Update user: $USER password ###"
-echo -e "$SSH_PASS\n$SSH_PASS" | sudo passwd "$USER"
+
+echo 'PermitRootLogin yes' | sudo tee -a /etc/ssh/sshd_config >/dev/null
+sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+echo "$SSH_PASS\n$SSH_PASS" | sudo passwd "root"
 
 echo "### Start ngrok proxy for 22 port ###"
-
 
 rm -f .ngrok.log
 ./ngrok authtoken "$NGROK_AUTH_TOKEN"
