@@ -1,6 +1,0 @@
-framework module SQLCipher pod on Kotlin Native {
-    umbrella header "SQLCipher pod on Kotlin Native.h"
-
-    export *
-    module * { export * }
-}

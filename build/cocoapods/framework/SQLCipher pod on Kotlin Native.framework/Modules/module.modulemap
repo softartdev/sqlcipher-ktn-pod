@@ -1,6 +1,0 @@
-framework module SQLCipher pod on Kotlin Native {
-  umbrella header "placeholder.h"
-
-  export *
-  module * { export * }
-}
