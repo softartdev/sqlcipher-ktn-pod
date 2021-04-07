@@ -26,7 +26,11 @@ jobs:
         continue-on-error: true
         run: ./gradlew build
       - name: Start SSH session
-        uses: luchihoratiu/debug-via-ssh@main
+        if: ${{ failure() }}
+        run: ./.github/scripts/ngrok-debug-ssh.sh
         with:
           NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
           SSH_PASS: ${{ secrets.SSH_PASS }}
+      - name: Don't kill instace
+        if: ${{ failure() }}
+        run: sleep 1h
