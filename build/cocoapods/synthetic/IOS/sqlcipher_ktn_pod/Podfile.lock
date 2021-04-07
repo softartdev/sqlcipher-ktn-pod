@@ -1,0 +1,27 @@
+PODS:
+  - SQLCipher (4.4.3):
+    - SQLCipher/standard (= 4.4.3)
+  - SQLCipher/common (4.4.3)
+  - SQLCipher/standard (4.4.3):
+    - SQLCipher/common
+  - sqlcipher_ktn_pod (0.1):
+    - SQLCipher (~> 4.0)
+
+DEPENDENCIES:
+  - sqlcipher_ktn_pod (from `../../../../../sqlcipher_ktn_pod.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - SQLCipher
+
+EXTERNAL SOURCES:
+  sqlcipher_ktn_pod:
+    :path: "../../../../../sqlcipher_ktn_pod.podspec"
+
+SPEC CHECKSUMS:
+  SQLCipher: 155ffeafc9ac102e5c9b68e3e9a1297a98a27096
+  sqlcipher_ktn_pod: ca05d43d285cc2dbfe38bb44f3bb95bcb2321cc9
+
+PODFILE CHECKSUM: 8e91fd6b968b56159e46e7935f5fa4ab38ab51fe
+
+COCOAPODS: 1.10.1

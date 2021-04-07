@@ -1,0 +1,95 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../sqlcipher-ktn-pod/0.1/sqlcipher-ktn-pod-0.1.module",
+    "group": "io.github.softartdev",
+    "module": "sqlcipher-ktn-pod",
+    "version": "0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "6gbpvpxu4jhzbhnpb6mj7ydrby"
+    }
+  },
+  "variants": [
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "sqlcipher-ktn-pod.klib",
+          "url": "sqlcipher-ktn-pod-iosarm64-0.1.klib",
+          "size": 5835,
+          "sha512": "c1511a9ece63d78ea508fcf54d1e059674091858374f49d4d1b856035699502963bde2f9b10eb44b39f2c45c6e2d00376a2267e5597a10c801203410707d2680",
+          "sha256": "aaa4237fff300424392c284f93bcc123b11a519cf6aed6047bbbae0b9d0441bd",
+          "sha1": "ef6dc622820db3f087af94b53b607160718a48e3",
+          "md5": "3d85fd86bb95f04b3c9ae28a694364e9"
+        },
+        {
+          "name": "sqlcipher-ktn-pod-cinterop-SQLCipher.klib",
+          "url": "sqlcipher-ktn-pod-iosarm64-0.1-cinterop-SQLCipher.klib",
+          "size": 61328,
+          "sha512": "dae79384dcbd030ae89f8e3f70c7d12b4f4df7c894dae776baf518985af735c29be9b93ccf2612f767bdd0edb28821e9ae13c5910d49e49f47d4bea3840d6aef",
+          "sha256": "d84f6dcc73d3631d12a43d9782632352ae7a20338d9819d78a3f33556252c513",
+          "sha1": "7ce23d9343cba5d32362e4b49146708e7d11159c",
+          "md5": "6eb3e0ee324436a3bd545abf20cbdd13"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "sqlcipher-ktn-pod-iosarm64-0.1-metadata.jar",
+          "url": "sqlcipher-ktn-pod-iosarm64-0.1-metadata.jar",
+          "size": 4690,
+          "sha512": "a1d8a9245220411c76391a074b1316d8b2670fdeb35dbd17178930ac3d36f8f50a266eb6047fbd3028f55cf994c078d959f8115d8c04ee01a1291e4508f907d4",
+          "sha256": "4a8a6519f8f6f4f9440ffd46c61f6af3816cbc2804176a10393b680e4a44c48c",
+          "sha1": "f823095e3aa356a01fbcf077adccf52cb2bbe8e9",
+          "md5": "4e50f50e9cde9541aa637d02acfa319c"
+        }
+      ]
+    },
+    {
+      "name": "metadataApiElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "available-at": {
+        "url": "../../sqlcipher-ktn-pod/0.1/sqlcipher-ktn-pod-0.1.module",
+        "group": "io.github.softartdev",
+        "module": "sqlcipher-ktn-pod",
+        "version": "0.1"
+      }
+    },
+    {
+      "name": "commonMainMetadataElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "available-at": {
+        "url": "../../sqlcipher-ktn-pod/0.1/sqlcipher-ktn-pod-0.1.module",
+        "group": "io.github.softartdev",
+        "module": "sqlcipher-ktn-pod",
+        "version": "0.1"
+      }
+    }
+  ]
+}
