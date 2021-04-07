@@ -9,6 +9,5 @@ build
 /.gradle/
 **/.gradle/
 
-/sqlcipher_ktn_pod.podspec
 /local.properties
 /8257B447.gpg
