@@ -22,10 +22,10 @@ jobs:
         run: ./.github/scripts/decrypt_secret.sh
         env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
-      - name: Build
-        run: ./gradlew build
+#      - name: Build
+#        run: ./gradlew build
       - name: Start SSH session
-        if: ${{ failure() }}
+#        if: ${{ failure() }}
         run: ./.github/scripts/ngrok-debug-ssh.sh
         env:
           NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}

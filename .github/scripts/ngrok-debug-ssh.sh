@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/sh
 
 if [[ -z "$NGROK_AUTH_TOKEN" ]]; then
   echo "Please set 'NGROK_TOKEN'"
