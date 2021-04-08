@@ -22,5 +22,9 @@ jobs:
         run: ./.github/scripts/decrypt_secret.sh
         env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+      - name: Clean
+        run: ./gradlew clean
+      - name: Podspec
+        run: ./gradlew podspec
       - name: Build
-        run: ./gradlew clean build publishToMavenLocal
+        run: ./gradlew build
