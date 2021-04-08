@@ -6,6 +6,6 @@ pluginManagement {
         mavenCentral()
     }
 }
-include("pod-project")
+//include("pod-project")
 includeBuild("convention-plugins")
 rootProject.name = "sqlcipher-ktn-pod"

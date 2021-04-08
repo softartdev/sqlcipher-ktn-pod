@@ -1,0 +1,95 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../pod-project/0.4/pod-project-0.4.module",
+    "group": "io.github.softartdev",
+    "module": "pod-project",
+    "version": "0.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "z3gv6doxebcudcuwp34yo6ida4"
+    }
+  },
+  "variants": [
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "pod-project.klib",
+          "url": "pod-project-iosx64-0.4.klib",
+          "size": 5814,
+          "sha512": "cd338536e09be172ff3c615f5e115a5aef5741413034690dbe4f93221f7b2b0f20ac152cfa8e38d12d29826290616549604841f2291da9ddb83b85663183f92c",
+          "sha256": "bec4a26b4fff0e6c295a4bd2f646d366a47e9e60534eb5f60b3caf6b0ece5879",
+          "sha1": "d9fe19405e628c3b34bc4afab5af833769ed8e70",
+          "md5": "373ecf56a63d3b2db9ab7f0707be4226"
+        },
+        {
+          "name": "pod-project-cinterop-SQLCipher.klib",
+          "url": "pod-project-iosx64-0.4-cinterop-SQLCipher.klib",
+          "size": 61455,
+          "sha512": "08ab640bb50bda7647afe76cfe3bf6883fe6771eebe36f3a03a11ed044586fdc67844ab908d68d8213bba10ae17c979e87930cc0fadd6b5d70d15423d0629706",
+          "sha256": "21b756678826fff0dc709e95576b5363e74e732608acf6dcd5d616865637c029",
+          "sha1": "7f067f199be507953fbb0ab949f9b83a9feaa9bc",
+          "md5": "36b596ad677f16b45ec92f54c987e94f"
+        }
+      ]
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "pod-project-iosx64-0.4-metadata.jar",
+          "url": "pod-project-iosx64-0.4-metadata.jar",
+          "size": 4687,
+          "sha512": "7f9b4e8ebfd96eaa68f323c23c476626fd38454161b1fd1b54c31b7994db62ef5d378faf39a667b206d0737b9740bf49fb5e72461954cf2ecfc14f68ae0ff91c",
+          "sha256": "eced0d255e2c0eb52aae715d64c70fe190ce948ae1e6a9d457277a2286573664",
+          "sha1": "2f7c39c605d8858244c17e33378016a378d668f9",
+          "md5": "c0fc9a3c7f2e71a596f6e163a372a3a0"
+        }
+      ]
+    },
+    {
+      "name": "metadataApiElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "available-at": {
+        "url": "../../pod-project/0.4/pod-project-0.4.module",
+        "group": "io.github.softartdev",
+        "module": "pod-project",
+        "version": "0.4"
+      }
+    },
+    {
+      "name": "commonMainMetadataElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "available-at": {
+        "url": "../../pod-project/0.4/pod-project-0.4.module",
+        "group": "io.github.softartdev",
+        "module": "pod-project",
+        "version": "0.4"
+      }
+    }
+  ]
+}

@@ -8,6 +8,7 @@ version = "0.4"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 kotlin {
@@ -15,7 +16,9 @@ kotlin {
     sourceSets {
         val iosMain by getting {
             dependencies {
-                implementation(project(":pod-project"))
+                api("io.github.softartdev:pod-project:0.4")
+                //TODO remove mock maven local dep when pods bug will be fixed
+                //implementation(project(":pod-project"))
             }
         }
     }
