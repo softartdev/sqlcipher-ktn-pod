@@ -3,11 +3,11 @@
 out
 gen
 *.hprof
-*.gpg
 
 build
 **/build/
-# Project exclude paths
 /.gradle/
 **/.gradle/
+
 /local.properties
+/8257B447.gpg

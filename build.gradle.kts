@@ -1,23 +1,25 @@
 plugins {
-    kotlin("multiplatform") version "1.4.32"
-    kotlin("native.cocoapods") version "1.4.32"
+    kotlin("multiplatform")
     id("convention.publication")
 }
 
 group = "io.github.softartdev"
-version = "0.1"
+version = "0.4"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 kotlin {
     ios()
-    cocoapods {
-        frameworkName = "SQLCipher pod on Kotlin Native"
-        summary = "Wrap SQLCipher lib from Cocoapods to Kotlin Native"
-        homepage = "https://github.com/softartdev/sqlcipher-ktn-pod"
-        ios.deploymentTarget = "13.5"
-        pod("SQLCipher", "~> 4.0")
+    sourceSets {
+        val iosMain by getting {
+            dependencies {
+                api("io.github.softartdev:pod-project:0.4")
+                //TODO remove mock maven local dep when pods bug will be fixed
+                //implementation(project(":pod-project"))
+            }
+        }
     }
 }

@@ -1,0 +1,115 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.softartdev",
+    "module": "pod-project",
+    "version": "0.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "z3gv6doxebcudcuwp34yo6ida4"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "pod-project-metadata-0.4-all.jar",
+          "url": "pod-project-0.4-all.jar",
+          "size": 676,
+          "sha512": "08b4a1d1a7dad4a58f2e3c4f8b247006051cbf84709e04ab24818e6b63b367e01bbc812e74dcfb6c43e115370104b99f1dda2de3d7030fc78522f41ace206d9c",
+          "sha256": "ffb6d15d1714490938f21dfd280cb71331d436123c4b17729822f1fcead58cd0",
+          "sha1": "83245807d8d5c5d467a99e42d26f2ac0de2bdaeb",
+          "md5": "d4f8d868ab258acb15c705996d5b3a87"
+        }
+      ]
+    },
+    {
+      "name": "commonMainMetadataElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "pod-project-0.4.jar",
+          "url": "pod-project-0.4.jar",
+          "size": 261,
+          "sha512": "846ed48b835946afefccc7f7fc13838237a3db41fd70440ff24fffeea2c1503404f178b0218faf51b843c760e8f1640b287e7f02193e4caa64a9786cf08fafb0",
+          "sha256": "9bc441fca57690debcfa79efd80957650c9e78903e563f1e659a4fd55b374dda",
+          "sha1": "b4ca000d51b2b78d58547cb201dd2102a173d6da",
+          "md5": "bc901259704221dcc466f9b925a4ce54"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../pod-project-iosarm64/0.4/pod-project-iosarm64-0.4.module",
+        "group": "io.github.softartdev",
+        "module": "pod-project-iosarm64",
+        "version": "0.4"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../pod-project-iosarm64/0.4/pod-project-iosarm64-0.4.module",
+        "group": "io.github.softartdev",
+        "module": "pod-project-iosarm64",
+        "version": "0.4"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../pod-project-iosx64/0.4/pod-project-iosx64-0.4.module",
+        "group": "io.github.softartdev",
+        "module": "pod-project-iosx64",
+        "version": "0.4"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../pod-project-iosx64/0.4/pod-project-iosx64-0.4.module",
+        "group": "io.github.softartdev",
+        "module": "pod-project-iosx64",
+        "version": "0.4"
+      }
+    }
+  ]
+}
