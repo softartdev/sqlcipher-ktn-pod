@@ -1,5 +1,6 @@
 # sqlcipher-ktn-pod
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.softartdev/sqlcipher-ktn-pod)
+[![Build & Publish CI/CD](https://github.com/softartdev/sqlcipher-ktn-pod/actions/workflows/build_publish.yml/badge.svg)](https://github.com/softartdev/sqlcipher-ktn-pod/actions/workflows/build_publish.yml)
 
 Kotlin Multiplatform library, wrap of [SQLCipher](https://www.zetetic.net/sqlcipher/) from Cocoapods to Kotlin Native targets
 
