@@ -23,4 +23,4 @@ jobs:
         env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
       - name: Build
-        run: ./gradlew build
+        run: ./gradlew clean build publishToMavenLocal
