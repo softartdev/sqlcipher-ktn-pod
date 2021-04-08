@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'sqlcipher_ktn_pod'
-    spec.version                  = '0.3'
+    spec.name                     = 'pod_project'
+    spec.version                  = '1.0'
     spec.homepage                 = 'https://github.com/softartdev/sqlcipher-ktn-pod'
     spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
     spec.authors                  = ''
@@ -28,13 +28,13 @@ Pod::Spec.new do |spec|
 
     spec.script_phases = [
         {
-            :name => 'Build sqlcipher_ktn_pod',
+            :name => 'Build pod_project',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
                 set -ev
                 REPO_ROOT="$PODS_TARGET_SRCROOT"
-                "$REPO_ROOT/gradlew" -p "$REPO_ROOT" ::syncFramework \
+                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :pod-project:syncFramework \
                     -Pkotlin.native.cocoapods.target=$KOTLIN_TARGET \
                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION \
                     -Pkotlin.native.cocoapods.cflags="$OTHER_CFLAGS" \
