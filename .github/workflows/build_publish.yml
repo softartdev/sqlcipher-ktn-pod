@@ -27,4 +27,4 @@ jobs:
       - name: Build
         run: ./gradlew build
       - name: Publish
-        run: ./gradlew publishAllPublicationsToSonatypeRepository
+        run: ./gradlew publishAllPublicationsToSonatypeRepository --max-workers 1 closeAndReleaseRepository

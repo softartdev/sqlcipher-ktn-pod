@@ -3,8 +3,8 @@ plugins {
     id("convention.publication")
 }
 
-group = "io.github.softartdev"
-version = "0.4"
+group = project.property("GROUP").toString()
+version = project.property("VERSION_NAME").toString()
 
 repositories {
     mavenCentral()

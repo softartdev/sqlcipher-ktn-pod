@@ -7,6 +7,7 @@ import java.util.*
 plugins {
     `maven-publish`
     signing
+    id("io.codearte.nexus-staging")
 }
 
 // Stub secrets to let the project sync and build without the publication values set up
@@ -15,6 +16,7 @@ ext["signing.password"] = null
 ext["signing.secretKeyRingFile"] = null
 ext["ossrhUsername"] = null
 ext["ossrhPassword"] = null
+ext["sonatypeStagingProfileId"] = null
 
 // Grabbing secrets from local.properties file or from environment variables, which could be used on CI
 val secretPropsFile = project.rootProject.file("local.properties")
@@ -32,6 +34,7 @@ if (secretPropsFile.exists()) {
     ext["signing.secretKeyRingFile"] = System.getenv("SIGNING_SECRET_KEY_RING_FILE")
     ext["ossrhUsername"] = System.getenv("OSSRH_USERNAME")
     ext["ossrhPassword"] = System.getenv("OSSRH_PASSWORD")
+    ext["sonatypeStagingProfileId"] = System.getenv("SONATYPE_STAGING_PROFILE_ID")
 }
 
 val javadocJar by tasks.registering(Jar::class) {
@@ -90,4 +93,11 @@ publishing {
 
 signing {
     sign(publishing.publications)
+}
+
+nexusStaging {
+    packageGroup = project.property("GROUP").toString()
+    stagingProfileId = getExtraString("sonatypeStagingProfileId")
+    username = getExtraString("ossrhUsername")
+    password = getExtraString("ossrhPassword")
 }

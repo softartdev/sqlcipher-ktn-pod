@@ -3,8 +3,8 @@ plugins {
     kotlin("native.cocoapods")
 }
 
-group = "io.github.softartdev"
-version = "1.0"
+group = project.property("GROUP").toString()
+version = project.property("VERSION_NAME").toString()
 
 repositories {
     mavenCentral()
