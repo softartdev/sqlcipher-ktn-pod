@@ -96,6 +96,7 @@ signing {
 }
 
 nexusStaging {
+    serverUrl = "https://s01.oss.sonatype.org/service/local/"
     packageGroup = project.property("GROUP").toString()
     stagingProfileId = getExtraString("sonatypeStagingProfileId")
     username = getExtraString("ossrhUsername")
