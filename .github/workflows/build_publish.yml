@@ -22,8 +22,6 @@ jobs:
         run: ./.github/scripts/decrypt_secret.sh
         env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
-      - name: Mock maven local. TODO remove when pods bug will be fixed
-        run: ./.github/scripts/copy_mock_m2.sh
       - name: Build
         run: ./gradlew build
       - name: Publish
