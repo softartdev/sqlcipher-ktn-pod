@@ -1,6 +1,5 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("native.cocoapods")
     id("convention.publication")
 }
 
@@ -11,13 +10,21 @@ repositories {
     mavenCentral()
 }
 
+fun configInterop(target: org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget) {
+    val main by target.compilations.getting
+    val sqlite3 by main.cinterops.creating {
+        includeDirs("$projectDir/src/include")
+    }
+}
+
 kotlin {
-    ios()
-    cocoapods {
-        frameworkName = "SQLCipher pod on Kotlin Native"
-        summary = "Wrap SQLCipher lib from Cocoapods to Kotlin Native"
-        homepage = "https://github.com/softartdev/sqlcipher-ktn-pod"
-        ios.deploymentTarget = "13.5"
-        pod("SQLCipher", "~> 4.0")
+//    ios()//TODO use both x64 & arm targets
+    val knTarget = iosX64("ios")
+
+    configInterop(knTarget)
+
+    knTarget.let { target ->
+        val test by target.compilations.getting
+        test.kotlinOptions.freeCompilerArgs += listOf("-linker-options", "-lsqlite3")
     }
 }
