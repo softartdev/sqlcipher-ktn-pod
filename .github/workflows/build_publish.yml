@@ -2,8 +2,8 @@ name: Build & Publish CI/CD
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - '*'
 
 jobs:
   build_unit_test_publish_job:
