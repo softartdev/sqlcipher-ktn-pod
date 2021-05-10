@@ -2,7 +2,7 @@
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.softartdev/sqlcipher-ktn-pod)
 [![Build & Publish CI/CD](https://github.com/softartdev/sqlcipher-ktn-pod/actions/workflows/build_publish.yml/badge.svg)](https://github.com/softartdev/sqlcipher-ktn-pod/actions/workflows/build_publish.yml)
 
-Kotlin Multiplatform library, wrap of [SQLCipher](https://www.zetetic.net/sqlcipher/) from Cocoapods to Kotlin Native targets
+Kotlin Multiplatform library, wrap of cinterop with [SQLCipher](https://www.zetetic.net/sqlcipher/) from Cocoapods to Kotlin Native targets
 
 ## Using in your projects
 The latest release is available on [Maven Central](https://repo1.maven.org/maven2/io/github/softartdev/sqlcipher-ktn-pod/).
@@ -26,15 +26,16 @@ kotlin {
 }
 ```
 ## Implementation
-Just [CocoaPods dependency of SQLDelight](https://cocoapods.org/pods/SQLCipher) using Kotlin Native plugin:
+Just cinterop with headers of [CocoaPods dependency of SQLDelight](https://cocoapods.org/pods/SQLCipher) v4.0 using Kotlin Native:
 ```kotlin
-plugins {
-    kotlin("native.cocoapods")
-}
 kotlin {
-    ios()
-    cocoapods {
-        pod("SQLCipher", "~> 4.0")
+    ios {
+/*
+        ...
+*/
+        val sqlite3 by main.cinterops.creating {
+            includeDirs("$projectDir/src/include")
+        }
     }
 }
 ```
