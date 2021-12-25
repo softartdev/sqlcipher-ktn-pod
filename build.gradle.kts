@@ -16,6 +16,7 @@ kotlin {
     val knTargets = listOf(
         macosX64(),
         iosX64(),
+        iosSimulatorArm64(),
         iosArm64(),
         iosArm32(),
         watchosArm32(),
