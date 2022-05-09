@@ -1,9 +1,10 @@
 package com.softartdev.sqlcipherktnpod
 
+import cocoapods.SQLCipher.SQLITE_ERROR
+import cocoapods.SQLCipher.SQLITE_OK
 import kotlin.test.Test
-import kotlin.test.assertTrue
-import sqlite3.*
 import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class PodAvailableTest {
 

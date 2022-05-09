@@ -1,9 +1,9 @@
 package com.softartdev.sqlcipherktnpod
 
 import cnames.structs.sqlite3
+import cocoapods.SQLCipher.*
 import kotlinx.cinterop.*
 import platform.Foundation.*
-import sqlite3.*
 
 @Suppress("CAST_NEVER_SUCCEEDS")
 class TestUtil {

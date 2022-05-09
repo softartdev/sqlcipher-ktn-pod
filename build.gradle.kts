@@ -1,7 +1,6 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-
 plugins {
     kotlin("multiplatform")
+    kotlin("native.cocoapods")
     id("convention.publication")
 }
 
@@ -13,37 +12,42 @@ repositories {
 }
 
 kotlin {
-    val knTargets = listOf(
-        macosX64(),
-        iosX64(),
-        iosSimulatorArm64(),
-        iosArm64(),
-        iosArm32(),
-        watchosArm32(),
-        watchosArm64(),
-        watchosX86(),
-        watchosX64(),
-        tvosArm64(),
-        tvosX64()
-    )
-    knTargets.forEach(action = ::configInterop)
-
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+    cocoapods {
+        framework {
+            baseName = "SQLCipher pod on Kotlin Native"
+        }
+        summary = "Wrap SQLCipher lib from Cocoapods to Kotlin Native"
+        homepage = "https://github.com/softartdev/sqlcipher-ktn-pod"
+        ios.deploymentTarget = "13.5"
+        pod("SQLCipher", "~> 4.5")
+    }
     sourceSets {
-        val appleMain = sourceSets.maybeCreate("appleMain")
-        val appleTest = sourceSets.maybeCreate("appleTest")
-
-        knTargets.forEach { target ->
-            target.compilations.getByName("main").source(appleMain)
-            target.compilations.getByName("test").source(appleTest)
+        val commonMain by getting
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+        val iosX64Main by getting
+        val iosArm64Main by getting
+        val iosSimulatorArm64Main by getting
+        val appleMain by creating {
+            dependsOn(commonMain)
+            iosX64Main.dependsOn(this)
+            iosArm64Main.dependsOn(this)
+            iosSimulatorArm64Main.dependsOn(this)
+        }
+        val iosX64Test by getting
+        val iosArm64Test by getting
+        val iosSimulatorArm64Test by getting
+        val appleTest by creating {
+            dependsOn(commonTest)
+            iosX64Test.dependsOn(this)
+            iosArm64Test.dependsOn(this)
+            iosSimulatorArm64Test.dependsOn(this)
         }
     }
-}
-
-fun configInterop(target: KotlinNativeTarget) {
-    val main by target.compilations.getting
-    val sqlite3 by main.cinterops.creating {
-        includeDirs("$projectDir/src/include")
-    }
-    val test by target.compilations.getting
-    test.kotlinOptions.freeCompilerArgs += listOf("-linker-options", "-lsqlite3")
 }
