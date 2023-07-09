@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'sqlcipher_ktn_pod'
-    spec.version                  = '1.4'
+    spec.version                  = '1.4.1'
     spec.homepage                 = 'https://github.com/softartdev/sqlcipher-ktn-pod'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''

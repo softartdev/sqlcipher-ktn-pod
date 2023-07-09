@@ -4,7 +4,6 @@ import cnames.structs.sqlite3
 import cocoapods.SQLCipher.*
 import kotlinx.cinterop.*
 
-@ExperimentalForeignApi
 fun checkCipherVersion(): String? {
     var result: String? = null
     memScoped {
@@ -35,7 +34,6 @@ fun checkCipherVersion(): String? {
     return result
 }
 
-@ExperimentalForeignApi
 private fun checkError(rc: Int, db: CPointerVarOf<CPointer<sqlite3>>, title: String) {
     if (rc == SQLITE_OK) return
     val errmsgCPointer: CPointer<ByteVar>? = sqlite3_errmsg(db.value)
