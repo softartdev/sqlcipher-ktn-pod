@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'sqlcipher_ktn_pod'
-    spec.version                  = '1.3'
+    spec.version                  = '1.4'
     spec.homepage                 = 'https://github.com/softartdev/sqlcipher-ktn-pod'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'SQLCipher', '~> 4.5'
                 
     spec.pod_target_xcconfig = {
-        'KOTLIN_PROJECT_PATH' => ':',
+        'KOTLIN_PROJECT_PATH' => '',
         'PRODUCT_MODULE_NAME' => 'SQLCipher pod on Kotlin Native',
     }
                 
@@ -22,8 +22,8 @@ Pod::Spec.new do |spec|
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
-                if [ "YES" = "$COCOAPODS_SKIP_KOTLIN_BUILD" ]; then
-                  echo "Skipping Gradle build task invocation due to COCOAPODS_SKIP_KOTLIN_BUILD environment variable set to \"YES\""
+                if [ "YES" = "$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED" ]; then
+                  echo "Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\""
                   exit 0
                 fi
                 set -ev
