@@ -3,5 +3,5 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.20")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22")
 }
